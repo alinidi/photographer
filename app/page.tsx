@@ -1,14 +1,9 @@
-import { Modal } from "@/components/shared/Modal/Modal";
+import { ModalPortal } from "@/components/shared/ModalPortal/ModalPortal";
 
 export default function Home() {
     return (
         <>
-            <Modal
-                title="like my portfolio? sign up for a shoot!"
-                firstInputText="your name"
-                secondInputText="+1"
-                buttonText="book now"
-            />
+            <ModalPortal />
         </>
     );
 }

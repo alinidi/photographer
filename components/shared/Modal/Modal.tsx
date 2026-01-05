@@ -8,12 +8,13 @@ type Props = {
     firstInputText: string;
     secondInputText: string;
     buttonText: string;
+    onClose?: () => void;
 };
 
-export const Modal = ({ title, firstInputText, secondInputText, buttonText }: Props) => {
+export const Modal = ({ title, firstInputText, secondInputText, buttonText, onClose }: Props) => {
     return (
         <div className={style.modal}>
-            <X className={style.modalClose} size={24} />
+            <X className={style.modalClose} size={24} onClick={onClose} />
             <h2 className={style.modalTitle}>{title}</h2>
             <div className={style.modalContent}>
                 <Input placeholder={firstInputText} />
