@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.input {
+    background-color: $secondary-color;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 18px 12px;
+    border: 1px solid $primary-color;
+    width: 100%;
+    font-size: $font-xs-size;
+    font-weight: 400;
+    font-family: $second-font;
+}

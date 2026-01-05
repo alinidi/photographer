@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+.button {
+    border: none;
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-size: $font-xs-size;
+    font-family: $second-font;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 18px 20px;
+    width: 100%;
+
+    &:hover:not(:disabled) {
+        background-color: $accent-color;
+        transition: 0.5s;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
