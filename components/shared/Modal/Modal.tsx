@@ -13,7 +13,7 @@ type Props = {
 
 export const Modal = ({ title, firstInputText, secondInputText, buttonText, onClose }: Props) => {
     return (
-        <div className={style.modal}>
+        <div className={style.modal} onClick={e => e.stopPropagation()}>
             <X className={style.modalClose} size={24} onClick={onClose} />
             <h2 className={style.modalTitle}>{title}</h2>
             <div className={style.modalContent}>

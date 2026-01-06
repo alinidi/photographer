@@ -7,7 +7,7 @@ import { Modal } from "../Modal/Modal";
 
 export const ModalPortal = () => {
     const originalOverflow = useRef<string>("");
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleCloseModal = useCallback(() => {
         setIsOpen(false);

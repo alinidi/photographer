@@ -1,0 +1,61 @@
+@import "../../../styles/variables.scss";
+
+.burger {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.burgerSpan {
+    position: relative;
+    content: "";
+    height: 2px;
+    background-color: $secondary-color;
+    width: 100%;
+    display: block;
+
+    &::before {
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        background-color: $secondary-color;
+        bottom: 6px;
+        display: block;
+        content: "";
+        right: 0;
+        transition: all 0.3s ease;
+        top: -6px;
+    }
+
+    &::after {
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        background-color: $secondary-color;
+        display: block;
+        content: "";
+        transition: all 0.3s ease;
+        bottom: 0;
+    }
+}
+
+.burger.active {
+    .burgerSpan {
+        background-color: transparent;
+
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+            width: 20px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+            width: 20px;
+        }
+    }
+}
