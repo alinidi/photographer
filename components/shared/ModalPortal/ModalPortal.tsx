@@ -13,8 +13,6 @@ export const ModalPortal = () => {
         setIsOpen(false);
     }, []);
 
-    const body = document.body;
-
     useEffect(() => {
         if (isOpen) {
             originalOverflow.current = document.body.style.overflow;
@@ -44,6 +42,8 @@ export const ModalPortal = () => {
         return null;
     }
 
+    if (typeof document === "undefined") return null;
+
     return createPortal(
         <div className={style.overlay} onClick={handleCloseModal}>
             <Modal
@@ -54,6 +54,6 @@ export const ModalPortal = () => {
                 onClose={handleCloseModal}
             />
         </div>,
-        body
+        document.body
     );
 };
