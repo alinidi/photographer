@@ -1,0 +1,45 @@
+@import "../../styles//variables.scss";
+
+.home {
+    min-height: 100vh;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.homeTitleWrapper {
+    color: $secondary-color;
+    font-family: $second-font;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 740px;
+    width: 100%;
+    padding-top: 193px;
+}
+
+.homeTitle {
+    font-size: $font-xl-size;
+    font-weight: 300;
+    line-height: 114%;
+}
+
+.homeSubtitle {
+    font-weight: 400;
+}
+
+.firstImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 60px;
+}

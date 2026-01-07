@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.resultsContainer {
+    display: flex;
+    color: $secondary-color;
+    gap: 60px;
+}
+
+.result {
+    display: flex;
+    gap: 8px;
+}
+
+.resultCount {
+    font-size: $font-l-size;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 300;
+}
+
+.resultTitle {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: $font-xs-size;
+    text-transform: initial;
+}

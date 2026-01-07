@@ -1,0 +1,30 @@
+@import "../../../styles/variables.scss";
+
+.leftSection {
+    position: relative;
+    z-index: 9;
+    top: 200px;
+    left: -295px;
+    align-self: center;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: $font-xxs-size;
+    font-weight: 500;
+    width: 60px;
+    height: 600px;
+}
+
+.content {
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 650px;
+}
+
+.divider {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $secondary-color;
+    margin: 0 8px;
+}
