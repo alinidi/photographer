@@ -3,19 +3,16 @@
 .leftSection {
     position: relative;
     z-index: 9;
-    top: 200px;
-    left: -295px;
     align-self: center;
     color: $secondary-color;
     font-family: $primary-font;
     font-size: $font-xxs-size;
     font-weight: 500;
-    width: 60px;
-    height: 600px;
 }
 
 .content {
     transform: rotate(-90deg);
+    transform-origin: center;
     display: flex;
     align-items: center;
     justify-content: space-between;

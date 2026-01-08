@@ -1,9 +1,16 @@
 @import "../../../styles/variables.scss";
 
 .header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 18px 20px;
-    background-color: $primary-color;
 }

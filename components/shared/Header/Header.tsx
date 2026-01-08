@@ -8,8 +8,10 @@ import { Menu } from "../Menu/Menu";
 export const Header = () => {
     return (
         <header className={style.header}>
-            <Image src={heartIcon} alt="heart-logo" />
-            <Menu />
+            <div className={style.container}>
+                <Image src={heartIcon} alt="heart-logo" />
+                <Menu />
+            </div>
         </header>
     );
 };
