@@ -1,7 +1,9 @@
 import Link from "next/link";
 import style from "../Nav/Nav.module.scss";
+import { usePathname } from "next/navigation";
 
 export const Nav = () => {
+    const pathname = usePathname();
     const menu = [
         {
             name: "about me",
@@ -28,13 +30,20 @@ export const Nav = () => {
     return (
         <nav className={style.nav}>
             <ul className={style.navList}>
-                {menu.map(item => (
-                    <li key={item.name} className={style.navListItem}>
-                        <Link href={item.link} className={style.navListLink}>
-                            {item.name}
-                        </Link>
-                    </li>
-                ))}
+                {menu.map(item => {
+                    const isActive = pathname === item.link;
+
+                    return (
+                        <li key={item.name} className={style.navListItem}>
+                            <Link
+                                href={item.link}
+                                className={`${style.navListLink} ${isActive ? style.active : ""}`}
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
+                    );
+                })}
             </ul>
         </nav>
     );

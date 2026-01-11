@@ -20,14 +20,20 @@
     font-size: $font-xs-size;
     font-family: $second-font;
     color: $secondary-color;
-
-    &:hover {
-        color: $accent-color;
-        transition: 0.3s;
-    }
 }
 
 .navListLink {
     text-decoration: none;
     color: inherit;
+
+    &:hover:not(.active) {
+        color: $accent-color;
+        transition: 0.3s;
+    }
+
+    &.active {
+        cursor: default;
+        color: $accent-color;
+        transform: none;
+    }
 }
