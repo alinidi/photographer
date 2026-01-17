@@ -1,0 +1,71 @@
+@import "../../../styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+.accordionItem {
+    color: $second-font;
+    max-width: 680px;
+    width: 100%;
+    border-bottom: 1px solid $secondary-color;
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
+    // gap: 18px;
+}
+
+.question {
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: $font-s-size;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.answer {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: $font-xs-size;
+    line-height: 150%;
+}
+
+.button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+    color: $secondary-color;
+
+    &:hover {
+        color: $accent-color;
+        transition: 0.3s;
+    }
+}
+
+.accordionContent {
+    overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease;
+}
+
+.open {
+    .accordionContent {
+        max-height: 200px;
+        opacity: 1;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease 0.1s;
+    }
+
+    .question {
+        margin-bottom: 18px;
+        transition: 0.3s;
+    }
+}

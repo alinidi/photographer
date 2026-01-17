@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.pageWrapper {
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: center;
+}
+
+.faqContainer {
+    height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.faqTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: $second-font;
+    font-size: $font-m-size;
+    text-transform: uppercase;
+    line-height: 125%;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-family: $primary-font;
+    font-size: $font-xs-size;
+    font-weight: 400;
+}
