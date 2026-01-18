@@ -4,6 +4,7 @@ import { Header } from "@/components/shared/Header/Header";
 import { MenuProvider } from "@/context/MenuProvider";
 import { ModalPortal } from "@/components/shared/ModalPortal/ModalPortal";
 import { FullMenuPortal } from "@/components/shared/FullMenuPortal/FullMenuPortal";
+import { Footer } from "@/components/shared/Footer/Footer";
 
 export const metadata: Metadata = {
     title: "Photographer",
@@ -21,6 +22,7 @@ export default function RootLayout({
                 <MenuProvider>
                     <Header />
                     {children}
+                    <Footer />
                     <ModalPortal />
                     <FullMenuPortal />
                 </MenuProvider>

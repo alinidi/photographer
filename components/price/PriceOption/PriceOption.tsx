@@ -1,4 +1,4 @@
-import { Button } from "@/components/shared/Button/Button";
+import { Button } from "@/components/ui/Button/Button";
 import { Option } from "../PricePage";
 import style from "./PriceOption.module.scss";
 
@@ -20,7 +20,7 @@ export const PriceOption = ({ title, options, price, subtitle }: Option) => {
             </div>
             <div className={style.buttonWrapper}>
                 <p className={style.description}>{subtitle}</p>
-                <Button text="book now" />
+                <Button name="book now" />
             </div>
         </div>
     );

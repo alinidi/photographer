@@ -10,6 +10,12 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 148px;
+
+    &:hover {
+        border: 1px solid $accent-color;
+        transition: 0.3s;
+        cursor: pointer;
+    }
 }
 
 .priceInfo {
