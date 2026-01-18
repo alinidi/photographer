@@ -1,8 +1,8 @@
-@import "../../styles//variables.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .home {
     min-height: 100vh;
-    // padding: 0 40px;
     background-color: $primary-color;
     display: flex;
     justify-content: center;
@@ -16,6 +16,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
+    margin: 0 40px;
+
+    @include tablet {
+        justify-content: flex-end;
+    }
 }
 
 .homeTitleWrapper {
@@ -33,16 +38,28 @@
     font-size: $font-xl-size;
     font-weight: 300;
     line-height: 114%;
+
+    @include tablet {
+        font-size: 68px;
+    }
 }
 
 .homeSubtitle {
     font-weight: 400;
+
+    @include tablet {
+        font-size: $font-s-size;
+    }
 }
 
 .firstImg {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 .secondImg {
@@ -51,6 +68,7 @@
     justify-content: start;
     align-items: flex-end;
     padding-top: 60px;
+    justify-content: space-around;
 }
 
 .introduction {
@@ -62,4 +80,8 @@
     color: $secondary-color;
     text-align: end;
     width: 220px;
+
+    @include desktop {
+        margin: 60px 0;
+    }
 }

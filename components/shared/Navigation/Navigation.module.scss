@@ -27,6 +27,8 @@
 
 .navListItem {
     cursor: pointer;
+    text-decoration: none;
+    color: $secondary-color;
 
     &:hover {
         color: $accent-color;

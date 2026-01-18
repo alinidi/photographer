@@ -1,4 +1,3 @@
-// import { LeftSection } from "./LeftSection/LeftSection";
 import style from "./Home.module.scss";
 import { Results } from "./Results/Results";
 import photo1 from "../../public/images/home1.svg";
@@ -9,7 +8,6 @@ export const HomeComponent = () => {
     return (
         <div className={style.home}>
             <div className={style.homeContent}>
-                {/* <LeftSection /> */}
                 <div className={style.homeTitleWrapper}>
                     <Results />
                     <h1 className={style.homeTitle}>professional photographer</h1>
